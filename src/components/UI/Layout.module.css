@@ -1,0 +1,203 @@
+#logo{
+    width: 150px;
+}
+
+#header{
+    height: 95px;
+    background-color: #080305;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 4;
+    top:0;
+    right:0;
+    left:0;
+}
+
+.menu_items{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.menu_items > li:not(:first-child){
+    margin-left: 50px;
+}
+
+.menu_items li{
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.menu_items li a, .menu_items li{
+    font-weight: 400;
+    color: #fff;
+    font-size: 18px;
+}
+
+.dropdown_button > strong {
+    cursor: pointer;
+}
+
+.dropdown_button{
+    position: relative;
+    padding: 5px;
+}
+
+.dropdown_button a span{
+    background-color:#2cb3cd;
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top:10px;
+    right: -5px;
+    font-size: 16px;
+}
+
+.cart_table{
+    position: absolute;
+    margin-bottom: -200px;
+    right: 0;
+    z-index: 2;
+    display: none;
+    width: 100%;
+    background-color: rgb(37, 37, 37);
+    min-width: 300px;
+    transition: all .8s ease-in-out;
+    padding: 10px 25px;
+    top: 40px;
+}
+
+#categories_list.cart_table{
+    padding: 0px 15px;
+}
+
+.cart_table *{
+    margin-bottom: 0;
+}
+
+.cart_table li:not(:last-child){
+    border-bottom: 1px solid #383838;
+}
+
+#categories_list.cart_table li{
+    transition: all .3s ease-in-out;
+}
+
+#categories_list.cart_table li:hover{
+    background-color: rgb(14, 14, 14);;
+}
+
+
+.dropdown_button:hover .cart_table{
+    display:block;
+}
+
+.cart_icon{
+    width: 30px;
+}
+
+.header_top{
+    border-bottom: 1px solid rgb(65, 65, 65);
+    text-align: center;
+    padding: 5px 0;
+    width: 100%;
+    align-items:center;
+    justify-content: center;
+}
+
+.shipping_icon{
+    width: 25px;
+    margin-right: 10px;
+}
+
+#footer{
+    background-color: rgb(20, 20, 20);
+    height: 300px;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    bottom: 0;
+}
+
+@media(max-width: 600px){
+
+    #menu_responsive{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(16, 16, 16);
+        top:0;
+        left: 0;
+        right:0;
+        bottom: 0;
+        z-index: 4;
+        transform: translateX(-100%);
+        color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s ease-in-out;
+      }
+    
+      #menu_responsive.active{
+          opacity: 1;
+          visibility: visible;
+          transform: translateX(0%);
+      }
+    
+      .nav_menu.active ul li{
+        margin: 0 0 10px;
+        font-size: 20px;
+      }
+    
+      .nav_menu.active ul li a{
+        color: #fff;
+      }
+    
+      #close_menu{
+        position: absolute;
+        top:20px;
+        right: 20px;
+        z-index: 5;
+        font-size: 25px;
+        color: #fff;
+      }
+
+      #burger_menu{
+        width: 30px;
+        fill: #fff;
+      }
+
+      #header{
+        height: 75px;;
+      }
+
+      #logo{
+        width: 130px;
+      }
+
+
+    .dropdown_button a span{
+        width: 20px;
+        height: 20px;
+        font-size: 14px;
+        right: -7px;
+        top: 14px;
+    }
+
+    .dropdown_button:hover .cart_table{
+        display:none;
+    }
+}

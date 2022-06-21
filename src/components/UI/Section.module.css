@@ -1,0 +1,42 @@
+#section{
+    height: calc(100vh - 95px);
+    background-image: url(../../assets/banner.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-size: cover;
+    background-position: center center;
+
+}
+
+#section.section_medium{
+    height: 50vh;
+}
+
+#section.section_small{
+    height: 25vh;
+}
+
+#section h2{
+    font-size: 50px;
+}
+
+#section p{
+    font-size:18x;
+}
+
+@media(max-width: 600px){
+    #section{
+        height: 50vh;
+    } 
+
+    #section h2{
+        font-size: 32px;
+    }
+    
+    #section p{
+        font-size: 14px;
+    }
+}
